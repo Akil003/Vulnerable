@@ -1,5 +1,5 @@
 {
-  "name": "isaanode",
+  "name": "vulnerable-nodejs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -23,5 +23,25 @@
     "nodemon": "^2.0.20",
     "request": "^2.88.2",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "description": "1. Donwload and install NodeJS  \r 1. After cloning the repository run  \r     `npm install`\r 1. Start running the WebServer by entering `npm run dev` in terminal.\r 1. Now, start the Machine Learning Model Server by using \r     `python manage.py runserver`",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityabhetuwal/Vulnerable.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Spam",
+    "detector",
+    "XSRF",
+    "Injection"
+  ],
+  "author": "Aaditya Bhetuwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aadityabhetuwal/Vulnerable/issues"
+  },
+  "homepage": "https://github.com/aadityabhetuwal/Vulnerable#readme"
 }
