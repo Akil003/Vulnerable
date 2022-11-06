@@ -36,7 +36,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: { 
     maxAge: 2 * 3600 * 1000,
-    sameSite: "strict"
+    sameSite: "strict" // off CSRF
   } // set max age to 2 hours
 }));
 

@@ -43,6 +43,11 @@ insert into accounts
 values (1000, 'aaditya', 1200);
 
 insert into accounts
+values (1004, 'anmol', 9000);
+
+update accounts set balance = 9000 where acc_no = 1004;
+
+insert into accounts
 values (1001, 'akil', 800);
 
 insert into accounts

@@ -10,7 +10,6 @@ const sendRequest = require("../services/sendRequest");
 var router = express.Router();
 const createError = require("http-errors");
 const checkAuth = require("../middlewares/checkAuth");
-const csrfProt = require("../middlewares/csrfProt");
 const request = require('request');
 
 
@@ -81,7 +80,10 @@ router.post("/login-user", async (req, res, next) => {
     }
 });
 
-router.get("/transfer/:to_acc_no/:amount", csrfProt, checkAuth, async (req, res, next) => {
+const csrfProt = require("../middlewares/csrfProt"); // off CSRF
+
+router.get("/transfer/:to_acc_no/:amount", csrfProt, checkAuth, async (req, res, next) => { // off CSRF
+// router.get("/transfer/:to_acc_no/:amount", checkAuth, async (req, res, next) => { // on CSRF
     let { to_acc_no, amount } = req.params;
     let from_acc_no = req.session?.acc_no;
 
