@@ -1,7 +1,12 @@
-## Demonstration of CSRF attack with a Spam Detection Model
+# Demonstration of CSRF attack with a Spam Detection Model
 
-#### Steps to run
+## Setup python django server
 
+1. Open `/spamHost` in terminal and type `pip install -r requirements.txt`
+1. Copy `/TextPreProcessor` into your python installation folder 
+    `<path to python base>/Lib/site-packages/` and paste it there.
+
+## Steps to run
 
 1. Donwload and install NodeJS  
 1. After cloning the repository run  
