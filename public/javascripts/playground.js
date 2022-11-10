@@ -35,6 +35,9 @@ $("#login-btn").on("click", async (e) => {
 
     const data = await response.json();
 
+    $("#form-message-info").html('');
+
+
     if(response.ok){
         $("#form-message-info").html(
             `<div class="text-success">Correct Credentials</div>`

@@ -4,7 +4,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: "root",
   port: 3306,
-  password: "password",
+  password: "pass",
   database: "isaa_db",
   multipleStatements: true
 });

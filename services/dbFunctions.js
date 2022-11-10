@@ -6,6 +6,9 @@ const {
 const verifyUser = async (username, passwd) => {
   return new Promise((resolve, reject) => {
     console.log(`select username from users where username = '${username}' and password = '${passwd}'`);
+    // select username from users where username = '123' or 1 = 1; -- ' and password={jsakdf}
+    // 123' or 1 =1 ; --
+    //123' or 1=1; #
 
     db.query(`select username from users where username = '${username}' and password = '${passwd}'`, 
     (err, result) => {

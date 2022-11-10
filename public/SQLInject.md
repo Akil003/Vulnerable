@@ -1,5 +1,8 @@
-## Steps to Follow for SQL Injection  
+<br>
+
+>>## Steps to Follow for SQL Injection  
   
+
 1. First try to find whether or not we can escape using ' in string fields during queries.
     Try `' or 1=1'` or `admin' or 1=1;--` and other such similar things.  
 

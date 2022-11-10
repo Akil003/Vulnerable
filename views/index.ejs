@@ -6,26 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <% include ./imports.ejs %> 
+  <% include ./imports.ejs %>
 
-  <!-- <link rel="stylesheet" href="styles\main.css"> -->
-  <title>ISAA Project</title>
+    <!-- <link rel="stylesheet" href="styles\main.css"> -->
+    <title>ISAA Project</title>
 </head>
 
 <body>
   <!-- Image and text -->
-  <% include ./nav.ejs %> 
+  <% include ./nav.ejs %>
 
 
-  <section class="d-flex align-items-center justify-content-start m-2 p-2">
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="image">
-        <!-- <img src="./content/assets/team3.png" alt="" width="760px" height="458px"> -->
-      </div>
+    <section class="container d-flex align-items-center">
+      <div class="my-5">
 
-      <div>
         <div class="display-4 text-primary fw-semibold"> Abstract</div>
-        <p>Cyber security is necessary to protect personal data, networks,
+        <p class="my-4">Cyber security is necessary to protect personal data, networks,
           and personal systems from unauthorized access and protect data from misuse. Cyber security
           consists of technologies, processes and measures that are designed to protect systems,
           networks, and data damage from cybercrimes. Effective cyber security reduces the risk of a
@@ -38,32 +34,56 @@
           preventive measures as many of us are still unaware about it. The objective of this paper is to
           create awareness of the various types of cyber-attacks and lay the foundation for their cyber
           security planning</p>
-      </div>
-    </div>
-  </section>
 
-  <div class="container">
-    <div class="row gap-2 p-2 m-2">
-      <div class="col card bg-light">
-        <div class="card-body">
-          <h5 class="card-title">SQL Injection</h5>
-          <p class="card-text">SQL injection usually occurs when you ask a user for input, like their username/userid,
-            and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database
-            and Destroy.</p>
-          <a href="/sql/playground" class="btn btn-outline-primary">Click here</a>
+      </div>
+    </section>
+
+    <section class="container align-items-center mb-4">
+      <div class="">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-3 mb-4">
+            <div class="card bg-light ">
+              <div class="card-body">
+                <h5 class="card-title">SQL Injection</h5>
+                <p class="card-text">SQL injection usually occurs when you ask a user for input, like their
+                  username/userid,
+                  and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your
+                  database
+                  and Destroy.</p>
+                <a href="/sql/playground" class="btn btn-outline-primary">Click here</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 mb-4">
+            <div class="card bg-light ">
+              <div class="card-body">
+                <h5 class="card-title">CSRF</h5>
+                <p class="card-text">Cross-site request forgery is a vulnerability that allows an attacker to induce users to perform unintended actions. It includes circumventing the same origin policy allowing different websites to interfare with each other.</p>
+                <a href="/csrf" class="btn btn-outline-primary">Click here</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <div class="card bg-light ">
+              <div class="card-body">
+                <h5 class="card-title">Spam Detection</h5>
+                <p class="card-text">
+                  By detecting unsolicited and unwanted emails, we can prevent spam messages from creeping into the user’s inbox.
+                  This is called Spam Detection, and it is a binary classification problem.
+                </p>
+                <a href="/spam-detect" class="btn btn-outline-primary">Click here</a>
+              </div>
+            </div>
+          </div>
+          
+          
+
+
         </div>
       </div>
-      <div class="col card bg-light">
-        <div class="card-body">
-          <h5 class="card-title">DDOS Attacks</h5>
-          <p class="card-text">A DDOS attack occurs when multiple systems flood the
-            bandwidth or resources of a targeted system, usually one or more web servers. It is an attack
-            meant to shut down a machine or network, making it inaccessible to its intended users.</p>
-          <a href="/ddos" class="btn btn-outline-primary">Click here</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+
 
 </body>
 

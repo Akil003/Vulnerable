@@ -28,12 +28,18 @@ router.post("/verify-credentials", async (req, res, next) => {
         if (secure == "yes") {
             const userDetails = await verifyUserSecure(username, password);
             return res.status(200).json(userDetails[0]);
+        }else{
+            const userDetails = await verifyUser(username, password);
+            return res.status(200).json(userDetails);
         }
-
-        const userDetails = await verifyUser(username, password);
-        return res.status(200).json(userDetails);
     } catch (err) {
         console.log(err);
+
+        if(err == "Invalid Credentials"){
+            return res.status(400).json({
+                message: "Invalid Credentials"
+            });
+        }
 
         return res.sendStatus(500);
         // res.status(500).json
@@ -80,10 +86,10 @@ router.post("/login-user", async (req, res, next) => {
     }
 });
 
-const csrfProt = require("../middlewares/csrfProt"); // off CSRF
+// const csrfProt = require("../middlewares/csrfProt"); // off CSRF
 
-router.get("/transfer/:to_acc_no/:amount", csrfProt, checkAuth, async (req, res, next) => { // off CSRF
-// router.get("/transfer/:to_acc_no/:amount", checkAuth, async (req, res, next) => { // on CSRF
+// router.get("/transfer/:to_acc_no/:amount", csrfProt, checkAuth, async (req, res, next) => { // off CSRF
+router.get("/transfer/:to_acc_no/:amount", checkAuth, async (req, res, next) => { // on CSRF
     let { to_acc_no, amount } = req.params;
     let from_acc_no = req.session?.acc_no;
 
